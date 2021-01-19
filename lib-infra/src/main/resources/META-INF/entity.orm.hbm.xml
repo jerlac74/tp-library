@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1"
+                 xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+
+    <access>FIELD</access>
+
+    <entity
+            class="fr.training.spring.library.domain.library.Library">
+        <table name="LIBRARY" />
+        <attributes>
+            <id name="id">
+                <generated-value generator="generator" strategy="IDENTITY"/>
+            </id>
+            <basic name="typeLib" />
+
+            <one-to-many name="books" fetch="LAZY" orphan-removal="true">
+                <cascade>
+                    <cascade-all />
+                </cascade>
+            </one-to-many>
+
+            <embedded name="address" >
+                <attribute-override name="number">
+                    <column name="NUMBER" />
+                </attribute-override>
+                <attribute-override name="street">
+                    <column name="STREET" />
+                </attribute-override>
+                <attribute-override name="postalCode">
+                    <column name="POSTAL_CODE" />
+                </attribute-override>
+                <attribute-override name="city">
+                    <column name="CITY" />
+                </attribute-override>
+            </embedded>
+
+            <embedded name="director">
+                <attribute-override name="surname">
+                    <column name="SURNAME" />
+                </attribute-override>
+                <attribute-override name="name">
+                    <column name="NAME" />
+                </attribute-override>
+            </embedded>
+
+        </attributes>
+    </entity>
+
+    <entity
+            class="fr.training.spring.library.domain.book.Book">
+        <table name="BOOK" />
+        <attributes>
+            <id name="id">
+                <generated-value generator="generator" strategy="IDENTITY"/>
+            </id>
+
+            <basic name="title" />
+            <basic name="author" />
+            <basic name="pagesNumbers" />
+            <basic name="genreLitteraire" />
+            <basic name="isbn" />
+
+        </attributes>
+    </entity>
+
+</entity-mappings>

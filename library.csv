@@ -1,0 +1,5 @@
+id,typelib,number,street,city,postalCode,name,surname, bookDtos
+1;Publique;5;Rue du paradis;PARIS;75002;DUPOND;Martin;[BookDto[id=1, title='TestLivre1', author='Marcel', pagesNumbers=120, genre='HISTORIQUE', isbn='25-46-28']]
+1;Publique;5;Rue du paradis;PARIS;75002;DUPOND;Martin;[BookDto[id=4, title='TestLivre4', author='Michellon', pagesNumbers=542, genre='COMICS', isbn='73-16-48']]
+2;Universitaire;25;Rue de l'enfer;PARIS;95023;DESP;victor;[BookDto[id=3, title='TestLivre3', author='ESDT', pagesNumbers=156, genre='HISTORIQUE', isbn='46-18-39']]
+3;Universitaire;185;Rue des écoutes;PARIS;46523;SERG;Michel;[BookDto[id=2, title='TestLivre2', author='DONBY', pagesNumbers=360, genre='SCIENCE_FICTION', isbn='49-78-14']]

@@ -1,0 +1,5 @@
+spring:
+    h2.console.enabled: true
+    datasource.url: jdbc:h2:~/testlibrary
+    #jpa.mapping-resources:
+    #    - META-INF/entity.orm.hbm.xml
